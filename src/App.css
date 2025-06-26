@@ -1,0 +1,40 @@
+.app-layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar default & collapsed styles */
+.sidebar {
+  width: 260px;
+  transition: width 0.3s ease;
+}
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.with-sidebar-collapsed {
+  margin-left: 80px; /* Match the width of collapsed sidebar */
+}
+
+.with-sidebar {
+  margin-left: 260px; /* Match the full width of expanded sidebar */
+}
+
+.with-sidebar-collapsed {
+  margin-left: 80px; /* Match the width of collapsed sidebar */
+}
+
+/* Calendar styling */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Adjust margin depending on sidebar state */
+.main-content.with-sidebar {
+  margin-left: 260px;
+}
+.main-content.with-sidebar-collapsed {
+  margin-left: 80px;
+}
